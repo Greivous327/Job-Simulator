@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css"/>
+        <title>Job Simulator</title>
+    <style id="jsbin-css">
+body {
+    font-family:helvetica;
+    color:#c4c4c4;
+    background-color:#1400ab;
+}
+h1, h3 {
+    text-align:center;
+    
+}
+.btn {
+    height:150px;
+    width:150px;
+    background-color:red;
+    color:white;
+    font-size:20px;
+    font-family:'Brush Script MT', cursive;
+    cursor:pointer;
+    outline:none;
+}
+.button {
+    display:flex;
+    justify-content:center;
+}
+.btn:hover, 
+.btn:active {
+    background-color:#cc0000;
+}
+.name {
+    text-align:center;
+    line-height:0px;
+    display:content;
+    justify-content:center;
+}
+#mName {
+    outline:none;
+}
+</style>
+</head>
+    <body>
+        <h1>Job Simulator</h1>
+        <div class="name">
+            <form>
+                <label for="name">Name:</label>
+                <input id="mName">
+                <input type="button" id="nSubmit" value="Start">
+            </form>
+        </div>
+        <div class="job" style="display:none;">
+      <h3><span class="uName"></span><span id="info">'s Money: $</span><span class="Money">0</span></h3>
+        <div class="button">
+        <button class="btn">More Money</button>
+        </div>
+        </div>
+        <script src="app.js"></script>
+    <script id="jsbin-javascript">
+const name = () =>{
+    var nSubmit = document.querySelector(`#nSubmit`);
+    var uInput = document.querySelector(`#mName`);
+    var info = document.querySelector(`#info`);
+    var start = document.querySelector(`.name`);
+    var job = document.querySelector(`.job`);
+    
+    nSubmit.addEventListener(`click`, () =>{
+        if(uInput === null){
+            info.textContent = (`Money: $`);
+        }else{
+            document.querySelector('.uName').innerHTML = uInput.value;
+        };
+        start.remove();
+        job.style.display = `initial`;
+        return;
+    });
+};
+
+const game = () =>{
+    let money = 0;
+    
+    const press = document.querySelector(`.button button`);
+    const Money = document.querySelector(`.Money`);
+    
+    press.addEventListener(`click`, () =>{
+       money++;
+      Money.textContent = money;
+    });
+    
+};
+game();
+name();
+</script>
+
+
+<script id="jsbin-source-css" type="text/css">body {
+    font-family:helvetica;
+    color:#c4c4c4;
+    background-color:#1400ab;
+}
+h1, h3 {
+    text-align:center;
+    
+}
+.btn {
+    height:150px;
+    width:150px;
+    background-color:red;
+    color:white;
+    font-size:20px;
+    font-family:'Brush Script MT', cursive;
+    cursor:pointer;
+    outline:none;
+}
+.button {
+    display:flex;
+    justify-content:center;
+}
+.btn:hover, 
+.btn:active {
+    background-color:#cc0000;
+}
+.name {
+    text-align:center;
+    line-height:0px;
+    display:content;
+    justify-content:center;
+}
+#mName {
+    outline:none;
+}</script>
+
+<script id="jsbin-source-javascript" type="text/javascript">const name = () =>{
+    var nSubmit = document.querySelector(`#nSubmit`);
+    var uInput = document.querySelector(`#mName`);
+    var info = document.querySelector(`#info`);
+    var start = document.querySelector(`.name`);
+    var job = document.querySelector(`.job`);
+    
+    nSubmit.addEventListener(`click`, () =>{
+        if(uInput === null){
+            info.textContent = (`Money: $`);
+        }else{
+            document.querySelector('.uName').innerHTML = uInput.value;
+        };
+        start.remove();
+        job.style.display = `initial`;
+        return;
+    });
+};
+
+const game = () =>{
+    let money = 0;
+    
+    const press = document.querySelector(`.button button`);
+    const Money = document.querySelector(`.Money`);
+    
+    press.addEventListener(`click`, () =>{
+       money++;
+      Money.textContent = money;
+    });
+    
+};
+game();
+name();</script></body>
+</html>
