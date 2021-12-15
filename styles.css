@@ -17,6 +17,16 @@ h1, h3 {
     cursor:pointer;
     outline:none;
 }
+.btn2 {
+    height:50px;
+    width:50px;
+    background-color:#1eff00;
+    color:white;
+    font-size:20px;
+    font-family:'Brush Script MT', cursive;
+    cursor:pointer;
+    outline:none;
+}
 .button {
     display:flex;
     justify-content:center;
@@ -24,6 +34,10 @@ h1, h3 {
 .btn:hover, 
 .btn:active {
     background-color:#cc0000;
+}
+.btn2:hover, 
+.btn2:active {
+    background-color:#18cc00;
 }
 .name {
     text-align:center;
