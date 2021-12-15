@@ -1,18 +1,18 @@
 const name = () =>{
-    var nSubmit = document.querySelector(`#nSubmit`);
-    var uInput = document.querySelector(`#mName`);
-    var info = document.querySelector(`#info`);
-    var start = document.querySelector(`.name`);
-    var job = document.querySelector(`.job`);
+    var nSubmit = document.querySelector("#nSubmit");
+    var uInput = document.querySelector("#mName");
+    var info = document.querySelector("#info");
+    var start = document.querySelector(".name");
+    var job = document.querySelector(".job");
     
-    nSubmit.addEventListener(`click`, () =>{
+    nSubmit.addEventListener("click", () =>{
         if(uInput === null){
-            info.textContent = (`Money: $`);
+            info.textContent = ("Money: $");
         }else{
             document.querySelector('.uName').innerHTML = uInput.value;
         };
         start.remove();
-        job.style.display = `initial`;
+        job.style.display = "initial";
         return;
     });
 };
@@ -20,14 +20,18 @@ const name = () =>{
 const game = () =>{
     let money = 0;
     
-    const press = document.querySelector(`.button button`);
-    const Money = document.querySelector(`.Money`);
+    const press = document.querySelector(".button button");
+    const Money = document.querySelector(".Money");
+    var bonus = document.querySelector("bonus")
     
-    press.addEventListener(`click`, () =>{
+    press.addEventListener("click", () =>{
        money++;
       Money.textContent = money;
     });
+    if(money >= 10){
+        bonus.style.display = "initial"
+    }
     
 };
-game();
 name();
+game();
