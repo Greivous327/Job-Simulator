@@ -33,5 +33,5 @@ const game = () =>{
     }
     
 };
-name();
 game();
+name();
